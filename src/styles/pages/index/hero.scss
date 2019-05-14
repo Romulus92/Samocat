@@ -1,0 +1,469 @@
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
+  &__ride {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    @include tablets {
+      height: 50%;
+      width: 100%;
+      background: url(../images/white.png) no-repeat center center;
+      background-size: cover;
+      justify-content: center;
+    }
+
+    &-wrap {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    &-img {
+      height: 100%;
+      transition: transform 1s ease-in-out;
+      position: absolute;
+      z-index: 2;
+    }
+
+    &-bg {
+      position: absolute;
+      top: 26%;
+      right: -400px;
+      z-index: 3;
+      overflow: hidden;
+
+      @include tablets {
+        display: none;
+      }
+    }
+
+    &-samocat {
+      margin-bottom: 70px;
+      z-index: 5;
+      transition: all 1s ease-in-out;
+
+      @include tablets {
+        display: none;
+      }
+
+      &-active {
+        right: 20%;
+      }
+
+      &-inactive {
+        right: 0;
+      }
+    }
+
+    &-bubble {
+      width: 330px;
+      height: 142px;
+      background: #ffc12a;
+      position: relative;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 4;
+      margin-bottom: 70px;
+
+      @include tablets {
+        background: none;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 49px solid transparent;
+        border-top-color: #ffc12a;
+        border-bottom: 0;
+        margin-left: 40px;
+        margin-bottom: -25px;
+        transform: rotate(-15deg);
+
+        @include tablets {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__buisness {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    transition: width 0.5s ease-in-out;
+    background: url(../images/back.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include tablets {
+      height: 50%;
+      width: 100%;
+      background: url(../images/yellow.png) no-repeat center center;
+      background-size: cover;
+      justify-content: flex-start;
+    }
+
+    &-img {
+      height: 100%;
+      transition: transform 1s ease-in-out;
+      position: absolute;
+      z-index: 1;
+    }
+
+    &-wrap {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    &-bg {
+      position: absolute;
+      top: 30%;
+      left: -400px;
+      z-index: 2;
+      transition: all 0.5s ease-in-out;
+
+      @include tablets {
+        display: none;
+      }
+    }
+
+    &-station {
+      z-index: 5;
+      transition: all 1s ease-in-out;
+      margin-bottom: 70px;
+
+      @include tablets {
+        display: none;
+      }
+
+      /* &-active {
+        left: 30%;
+      }
+      &-inactive {
+        left: 10%;
+      } */
+    }
+
+    &-bubble {
+      width: 330px;
+      height: 142px;
+      background: white;
+      position: relative;
+      border-radius: 20px;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      @include tablets {
+        background: none;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 49px solid transparent;
+        border-top-color: white;
+        border-bottom: 0;
+        margin-left: -140px;
+        margin-bottom: -25px;
+        transform: rotate(15deg);
+        z-index: 3;
+
+        @include tablets {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__wheel {
+    position: absolute;
+    z-index: 6;
+    top: 42%;
+    left: -14%;
+    transition: all 0.5s ease-in-out;
+
+    @include macbookair {
+      left: -22%;
+      transform: scale(.9)
+    }
+
+    @include bignotebooks {
+      transform: scale(.8)
+    }
+
+    @include notebooks {
+      display: none;
+    }
+  }
+
+  &__text {
+    @include moscow(bold);
+    font-size: 41px;
+    position: relative;
+    z-index: 4;
+    padding-bottom: 4px;
+    border-bottom: 1px solid black;
+
+    @include tablets {
+      font-size: 50px;
+    }
+
+    @include phones {
+      font-size: 32px;
+    }
+
+    &_start {
+      align-self: flex-start;
+      margin-left: 38px;
+
+      @include tablets {
+        margin-left: 0;
+        align-self: center;
+      }
+    }
+  }
+
+  &__download {
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+
+    @include tablets {
+      bottom: 35px;
+      width: 340px;
+      align-self: center;
+    }
+
+    @include iphones {
+      width: 280px;
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 31px;
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__google {
+    width: 160px;
+    height: 55px;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+    border-radius: 12px;
+
+    @include tablets {
+      background: white;
+    }
+
+    @include phones {
+      width: 130px;
+      height: 45px;
+    }
+  }
+
+  &__appstore {
+    width: 160px;
+    height: 55px;
+    position: relative;
+    z-index: 5;
+    border-radius: 12px;
+    cursor: pointer;
+
+    @include tablets {
+      background: white;
+    }
+
+    @include phones {
+      width: 130px;
+      height: 45px;
+    }
+  }
+
+  &__logo {
+    height: 34px;
+    width: 42px;
+    position: relative;
+    z-index: 5;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__rules {
+    margin-right: 29px;
+    @include moscow(light);
+    border-bottom: 1px dashed black;
+    cursor: pointer;
+  }
+
+  &__confidential {
+    @include moscow(light);
+    border-bottom: 1px dashed black;
+    cursor: pointer;
+  }
+}
+
+.hover-left {
+  .hero__ride {
+    width: 55%;
+  }
+
+  .hero__buisness {
+    width: 45%;
+  }
+
+  .hero__wheel {
+    transform: rotate(60deg);
+
+    @include macbookair {
+      transform: rotate(60deg) scale(.9)
+    }
+
+    @include bignotebooks {
+      transform: rotate(60deg) scale(.8)
+    }
+  }
+}
+
+.hover-right {
+  .hero__ride {
+    width: 45%;
+  }
+
+  .hero__buisness {
+    width: 55%;
+  }
+
+  .hero__wheel {
+    transform: rotate(-60deg);
+
+    @include macbookair {
+      transform: rotate(-60deg) scale(.9)
+    }
+
+    @include bignotebooks {
+      transform: rotate(-60deg) scale(.8)
+    }
+  }
+}
+
+.click-left {
+  .hero__ride {
+    width: 100%;
+  }
+
+  .hero__buisness {
+    width: 0%;
+
+    &-bubble {
+      display: none;
+    }
+  }
+
+  .hero__ride-samocat {
+    left: 35%;
+  }
+
+  .hero__ride-bg {
+    left: 24%;
+  }
+
+  .hero__wheel {
+    left: 150%;
+    transform: rotate(360deg);
+
+    @include macbookair {
+      transform: rotate(360deg) scale(.9)
+    }
+
+    @include bignotebooks {
+      transform: rotate(360deg) scale(.8)
+    }
+  }
+}
+
+.click-right {
+  .hero__ride {
+    width: 0%;
+
+    &-bubble {
+      display: none;
+    }
+  }
+
+  .hero__buisness {
+    width: 100%;
+  }
+
+  .hero__buisness-station {
+    left: 40%;
+  }
+
+  .hero__buisness-bg {
+    left: 20%;
+  }
+
+  .hero__wheel {
+    left: -150%;
+    transform: rotate(-360deg);
+
+    @include macbookair {
+      transform: rotate(-360deg) scale(.9)
+    }
+
+    @include bignotebooks {
+      transform: rotate(-360deg) scale(.8)
+    }
+  }
+}
+
+.click-right-bg {
+  .hero__buisness {
+    background: #e9ae1d;
+  }
+}

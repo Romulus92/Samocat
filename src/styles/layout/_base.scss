@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+.container {
+  position: relative;
+  width: 95%;
+  max-width: rem(1170px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  @include tablets {
+    max-width: rem(768px);
+  }
+
+  &__slider {
+    overflow: visible;
+  }
+
+  &_ride-heading {
+    overflow: visible;
+  }
+}
+
+.svg-sprite {
+  display: none;
+}
+
+.body-hidden {
+  overflow: hidden;
+}

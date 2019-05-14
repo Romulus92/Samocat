@@ -1,0 +1,99 @@
+extends ../template 
+
+block content
+  .ride__content
+    .ride
+      .container.container_ride-heading
+        .ride__header
+          h1.ride__heading Сеть автоматических 
+            span.ride__heading_orange станций проката
+            .ride__clock
+              svg.ride__clock-img
+                use(xlink:href="#24h")
+        p.ride__lead Просто возьми самокат в прокат и ощути новый уровень мобильности!
+      .ride__slider
+        .ride__item.ride__item_1
+          .container
+            span.ride__text Качай 
+              span.ride__text_black приложение
+            .ride__download
+              .ride__download-logo
+                svg.ride__download-logo-img
+                  use(xlink:href="#bicycle")
+              a.ride__download-google(href="https://play.google.com/store/apps/details?id=com.samocatapp")
+                img.ride__download-google-img(src="assets/images/googleplay.svg")
+              a.ride__download-appstore(href="https://itunes.apple.com/ru/app/samocat-sharing/id1226718782?mt=8")
+                img.ride__download-appstore-img(src="assets/images/appstore.svg")
+        .ride__item.ride__item_2
+          .container
+            span.ride__text Выбирай станцию <br>
+              span.ride__text_black и бронируй самокат
+        .ride__item.ride__item_3
+          .container.container__slider
+            span.ride__text Оплачивай 
+              span.ride__text_black доступ
+            a.ride__button Тарифы
+        .ride__item.ride__item_4
+          .container.container__slider
+            .ride__item-picture.animated
+              img.ride__item-picture-img(src="assets/images/samocatman.svg")
+            .ride__item-bubble.animated
+              .ride__item-bubble-text Поехали!
+    .easy
+      .container.easy-content
+        img.easy__picture(src="assets/images/easy_img.png")
+        .easy__info
+          h2.easy__heading Да, это просто.
+            .easy__heading.easy__heading_black Удобно. Легко!
+          span.easy__lead Самокат – идеальное средство передвижения по городу. 
+          span.easy__lead До дома, до работы, до метро или магазина. 
+          span.easy__lead Выстраивай любые маршруты и экономь время на своих перемещениях.
+    .setup
+      .container.setup-content
+        .setup__hand
+          a(href="https://play.google.com/store/apps/details?id=com.samocatapp")
+            img.setup__google(src="assets/images/googleplay.svg")
+          a(href="https://itunes.apple.com/ru/app/samocat-sharing/id1226718782?mt=8")
+            img.setup__appstore(src="assets/images/appstore.svg")
+        .setup__info
+          h2.setup__heading Устанавливай<br> приложение<br> на свой смартфон
+          p.setup__lead Катайся куда хочешь <br> и когда захочешь!
+    footer.footer
+      .container
+        .footer-content
+          .footer__left
+            a.footer__link.footer__link-confidential(href='assets/documents/confidential.pdf') Политика конфиденциальности
+            a.footer__link.footer__link-rules(href='assets/documents/datausage.pdf') Правила
+            span.footer__copyright © 2018, «samocat sharing»
+          .footer__center
+            .footer__social
+              a.footer__social-item(href='https://vk.com/samocatsharing')
+                svg.footer__social-img
+                  use(xlink:href='#logo_vk')
+                i.footer__social-img-fallback.fab.fa-vk
+              a.footer__social-item(href='https://www.facebook.com/SamocatSharing')
+                svg.footer__social-img
+                  use(xlink:href='#logo_fb')
+                i.footer__social-img-fallback.fab.fa-facebook-f
+              a.footer__social-item(href='https://www.instagram.com/samocat_sharing/')
+                svg.footer__social-img
+                  use(xlink:href='#logo_ig')
+                i.footer__social-img-fallback.fab.fa-instagram
+          .footer__right
+            a.footer__rechi(href='https://rechi.media/')
+              .footer__rechi-logo
+                svg.footer__rechi-img
+                  use(xlink:href='#logo_rechi')
+                img.lazy.footer__rechi-img-fallback(data-src='assets/images/logo-footer.png', alt='')
+              span.footer__rechi-text Разработка сайта: RECHI media
+
+    
+
+
+
+
+
+
+          
+
+

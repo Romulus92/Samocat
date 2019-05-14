@@ -1,0 +1,64 @@
+.setup {
+  background: url(../images/bg_easy.png);
+  height: 1141px;
+  margin-top: -290px;
+  background-size: cover;
+  &-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: visible;
+  }
+  &__hand {
+    position: absolute;
+    width: 580px;
+    height: 655px;
+    background: url(../images/phone_hand.png);
+    bottom: 0;
+    left: 0;
+    @include netbooks {
+      left: -70px;
+    }
+  }
+  &__google {
+    position: absolute;
+    width: 195px;
+    height: 68px;
+    bottom: 307px;
+    left: 296px;
+    background: white;
+    border-radius: 12px;
+  }
+  &__appstore {
+    position: absolute;
+    width: 195px;
+    height: 68px;
+    bottom: 224px;
+    left: 296px;
+    background: white;
+    border-radius: 12px;
+  }
+  &__heading {
+    @include moscow(medium);
+    font-size: 40px;
+    line-height: 47px;
+    color: white;
+    padding-top: 140px;
+    margin: 0;
+    margin-bottom: 5px;
+    padding-left: 80px;
+  }
+  &__lead {
+    color: white;
+    @include moscow(light);
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 80px;
+  }
+  &__info {
+    width: 51.3%;
+    height: 655px;
+  }
+}

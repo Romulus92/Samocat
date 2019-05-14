@@ -1,0 +1,31 @@
+extends ../template 
+
+block header
+  include ../common/header.pug
+
+block content
+  .hero
+    .hero__ride
+      .hero__ride-bubble
+        span.hero__text Прокатимся?
+      img.hero__ride-bg(src="assets/images/cityline.png")
+      img.hero__ride-samocat(src="assets/images/samocaty.png")
+    .hero__buisness
+      .hero__buisness-bubble 
+        span.hero__text.hero__text_start Стать <br>
+        span.hero__text партнером
+      img.hero__buisness-bg(src="assets/images/orangecityline.png")
+      img.hero__buisness-station(src="assets/images/stoika.png")
+      img.hero__wheel(src="assets/images/wheel.png")
+    .hero__download
+      a.hero__google(href="https://play.google.com/store/apps/details?id=com.samocatapp")
+        img.hero__google-img(src="assets/images/googleplay.svg")
+      a.hero__logo
+        svg.hero__logo-img
+          use(xlink:href="#bicycle")
+      a.hero__appstore(href="https://itunes.apple.com/ru/app/samocat-sharing/id1226718782?mt=8")
+        img.hero__appstore-img(src="assets/images/appstore.svg")
+    .hero__footer
+      a.hero__rules правила
+      a.hero__confidential политика конфиденциальности
+  .content__wrapper

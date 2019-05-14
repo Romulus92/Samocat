@@ -1,0 +1,26 @@
+.easy {
+  &-content {
+    flex-direction: row;
+  }
+  &__info {
+    padding-top: 80px;
+    padding-left: 65px;
+  }
+  &__heading {
+    color: #f1b628;
+    font-size: 50px;
+    @include moscow(medium);
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 20px;
+    &_black {
+      color: black;
+    }
+  }
+  &__lead {
+    font-size: 18px;
+    line-height: 34px;
+    display: block;
+    @include moscow(light);
+  }
+}

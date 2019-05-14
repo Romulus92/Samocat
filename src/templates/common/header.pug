@@ -1,0 +1,55 @@
+header.header
+  .container
+    .nav
+      .nav__main
+        .nav__logo
+          svg.nav__logo-img
+            use(xlink:href="#logo") 
+        .nav__menu
+          a.nav__link вакансии
+          a.nav__link меадиакит
+          a.nav__link контакты
+      .nav__lang
+        a.nav__lang-link.nav__lang-link_active en
+        .nav__lang-line
+        a.nav__lang-link ru
+.ride__mobile-header
+  .container
+    span.ride__mobile_logo Samocat sharing
+    a.ride__mobile_burger
+      .ride__mobile_line.ride__mobile_line_1
+      .ride__mobile_line.ride__mobile_line_2
+      .ride__mobile_line.ride__mobile_line_3
+.ride__mobile_menu
+  .ride__mobile_choice
+    a.ride__mobile_rent
+      img.ride__mobile_rent_bg(src="assets/images/stoika_plan.png")
+      h2.ride__mobile_rent_heading Прокат
+    a.ride__mobile_buisness
+      img.ride__mobile_buisness_bg(src="assets/images/menu_fransh_plan.png")
+      h2.ride__mobile_buisness_heading Франшиза
+  .ride__mobile_footer
+    a.ride__mobile_footer_rate тарифы
+    a.ride__mobile_footer_rules правила
+  .nav__lang
+    a.nav__lang-link.nav__lang-link_active en
+    .nav__lang-line
+    a.nav__lang-link ru
+  .footer__social
+    a.footer__social-item(href='https://vk.com/samocatsharing')
+      svg.footer__social-img
+        use(xlink:href='#logo_vk')
+      i.footer__social-img-fallback.fab.fa-vk
+    a.footer__social-item(href='https://www.facebook.com/SamocatSharing')
+      svg.footer__social-img
+        use(xlink:href='#logo_fb')
+      i.footer__social-img-fallback.fab.fa-facebook-f
+    a.footer__social-item(href='https://www.instagram.com/samocat_sharing/')
+      svg.footer__social-img
+        use(xlink:href='#logo_ig')
+      i.footer__social-img-fallback.fab.fa-instagram
+  span.footer__copyright © 2018, «samocat sharing»
+  a.footer__rechi-logo(href="https://rechi.media/")
+    svg.footer__rechi-img
+      use(xlink:href='#logo_rechi')
+    img.lazy.footer__rechi-img-fallback(data-src='assets/images/logo-footer.png', alt='')

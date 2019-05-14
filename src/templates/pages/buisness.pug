@@ -1,0 +1,213 @@
+extends ../template 
+
+block content
+  .buisness__content
+    .buisness
+      .owner
+        .container.owner__container
+          .owner__picture
+            img.owner__picture-img(src="assets/images/owner_wheel.png")
+          .owner__info
+            h2.owner__heading Стань владельцем
+              span.owner__heading_orange бизнеса на колёсах
+              .owner__monet
+                svg.owner__monet_img
+                  use(xlink:href="#monet")
+            p.owner__text <span class="owner__text_bold">Samocat Sharing</span> – современная система аренды самокатов по всему.
+            p.owner__text Чтобы открыть свой бизнес, достаточно поставить одну или несколько станций и начать зарабатывать уже с первого дня установки. Запустите в своём городе полностью автоматизированный сервис проката Samocat Sharing!
+      .prop
+        .container.prop__container
+          .prop__left
+            .prop__item
+              .prop__header            
+                .prop__icon.prop__icon_wheel
+                  svg.prop__icon_img
+                    use(xlink:href="#wheel")
+                .prop__line.prop__line_left
+              h2.prop__heading Вандалостойкая и всепогодная станция
+              p.prop__text снаружи отсутствуют экраны и кнопки 
+            .prop__item
+              .prop__header            
+                .prop__icon.prop__icon_lock
+                  svg.prop__icon_img
+                    use(xlink:href="#lock")
+                .prop__line.prop__line_left
+              h2.prop__heading Электронный замок
+              p.prop__text открывается через мобильное приложение 
+            .prop__item
+              .prop__header            
+                .prop__icon.prop__icon_planet
+                  svg.prop__icon_img
+                    use(xlink:href="#planet")
+                .prop__line.prop__line_left
+              h2.prop__heading Умная транспортная сеть
+              p.prop__text мониторинг станций и управление трафиком через облачную систему
+          .prop__right
+            .prop__item
+              .prop__header
+                .prop__line.prop__line_right           
+                .prop__icon.prop__icon_phone
+                  svg.prop__icon_img
+                    use(xlink:href="#phone")
+              h2.prop__heading Приложение для IOS/Android
+              p.prop__text поиск станций, расчет маршрута, регистрация и оплата 
+            .prop__item
+              .prop__header 
+                .prop__line.prop__line_right            
+                .prop__icon.prop__icon_samocat_mech
+                  svg.prop__icon_img
+                    use(xlink:href="#samocat_mech")
+              h2.prop__heading Механические самокаты
+              p.prop__text Kleefer pure 180 вес: 5 кг, габариты: 1020 x 210 x 140 мм,.  
+            .prop__item
+              .prop__header
+                .prop__line.prop__line_right             
+                .prop__icon.prop__icon_samocat_electro
+                  svg.prop__icon_img
+                    use(xlink:href="#samocat_electro")
+              h2.prop__heading Электросамокаты
+              p.prop__text Ninebot by Segway ES1 вес: 11,3 кг, максимальная скорость: 20 км/час, запас хода: 25 км
+          .prop__bottom
+            .prop__item
+              h2.prop__heading Размер
+              p.prop__text всего 2м² для станции <br> на 12 самокатов
+            .prop__item
+              h2.prop__heading Расположение
+              p.prop__text у дверей, на стене, на парковке, без выделения земельного участка
+      .variation
+        .variation__header
+          .container.variation__container
+            h2.variation__heading.variation__heading_orange Samocat Sharing.
+            h2.variation__heading Сеть автоматических<br> станций проката 24/7
+            p.variation__lead Выберите удобный формат<br> сотрудничества:
+        .variation__hero
+          svg.variation__hero-img
+            use(xlink:href="#borodach")
+        .variation__slider
+          .variation__item.variation__item_1
+            .container.variation__item-container
+              img.variation__item-picture(src="assets/images/variation_item_pic_1.png")
+              .variation__item-info
+                h2.variation__item-heading РЕШЕНИЕ
+                span.variation__item-lead для города
+                .variation__item-info-wrap
+                  p.variation__item-text <span class="variation__item-text_orange">Желаете разгрузить пробки</span> на дорогах и дополнить транспортную систему компактным сервисом самокатов?
+                  a.variation__item-button Подробнее
+          .variation__item.variation__item_2
+            .container.variation__item-container
+              img.variation__item-picture(src="assets/images/variation_item_pic_2.png")
+              .variation__item-info
+                h2.variation__item-heading ФРАНШИЗА
+                .variation__item-info-wrap
+                  p.variation__item-text Готовы <span class="variation__item-text_orange">зарабатывать</span> и ищете успешную модель для бизнеса?
+                  a.variation__item-button Подробнее
+          .variation__item.variation__item_3
+            .container.variation__item-container
+              img.variation__item-picture(src="assets/images/variation_item_pic_3.png")
+              .variation__item-info
+                h2.variation__item-heading.variation__item-heading_corp КОРПОРАТИВНАЯ <span class="variation__item-heading_dark">модель для закрытых территорий</span>
+                .variation__item-info-wrap
+                  p.variation__item-text <span class="variation__item-text_orange">Хотите, чтобы ваши сотрудники</span> передвигались по территории в 3 раза быстрее, чем пешком?
+                  a.variation__item-button Подробнее
+        .container
+          .variation__slider-switcher
+            a.variation__slider-switcher-item.variation__slider-switcher-item-active.variation__slider-switcher-item-1 Франшиза
+            a.variation__slider-switcher-item.variation__slider-switcher-item-2 Корпоративная модель
+            a.variation__slider-switcher-item.variation__slider-switcher-item-3 Решение для города
+      .automated
+        .container.automated__container
+          .automated__header
+            h2.automated__heading Автоматизированный бизнес:
+            h2.automated__heading.automated__heading_orange «Купил, включил и забыл!»
+          .automated__content
+            .automated__info
+              p.automated__info-text Готовая система адаптирована как для опытных, так и для начинающих предпринимателей. Если у вас на примете есть хорошо посещаемое туристическое место – установите на нём станцию и зарабатывайте деньги на шеринге самокатов.
+              h3.automated__info-heading Оставьте заявку на получение подробного  
+              h3.automated__info-heading.automated__info-heading_black коммерческого предложения со статистикой и цифрами.
+              a.automated__info-button Бизнес-план
+              a.automated__info-legal Нажимая кнопку, вы даете согласие<br>
+              a.automated__info-legal на обработку персональных данных
+            .automated__hero
+              img.automated__picture(src="assets/images/stoika_buisness.png")
+      .how
+        .container
+          h2.how__heading КАК ЭТО<br> работает?
+          p.how__lead Создайте собственную транспортную сеть и получайте прибыль на автоматическом прокате самокатов.
+        .how__steps
+          .container.how__steps-container
+            .how__steps-item
+              .how__steps-header
+                span.how__steps-number 1.
+                .how__steps-icon.how__steps-icon_1
+                  svg.how__steps-icon-img
+                    use(xlink:href="#samocat_electro")
+              .how__steps-heading Приобретите
+              .how__steps-lead станцию и установите её в оживленной локации
+            .how__steps-arrow.how__steps-arrow_1
+              svg.how__steps-arrow-img
+                use(xlink:href="#double_arrow")
+            .how__steps-item
+              .how__steps-header
+                span.how__steps-number 2.
+                .how__steps-icon.how__steps-icon_2
+              .how__steps-heading Определите 
+              .how__steps-lead тарифы
+            .how__steps-arrow.how__steps-arrow_2
+              svg.how__steps-arrow-img
+                use(xlink:href="#double_arrow")
+            .how__steps-item
+              .how__steps-header
+                span.how__steps-number 3.
+                .how__steps-icon.how__steps-icon_3
+                  svg.how__steps-icon-img
+                    use(xlink:href="#money")
+              .how__steps-heading Получайте
+              .how__steps-lead выручку уже с первого дня работы сервиса
+        .container
+          p.how__text Сеть <span class="how__text_bold">Samocat Sharing</span> связывает кварталы и микрорайоны. Станции могут быть установлены в парке, торговых центрах, внутри зданий и на закрытых территориях с ограниченным движением транспорта.
+      .get
+        .container
+          .get__row
+            .get__item.get__item_1
+              .get__profile
+                img.get__picture.get__picture_1(src="assets/images/get1.png")
+              .get__header
+                h2.get__heading Автоматическая станция <span class="get__heading get__heading_orange">проката самокатов:<br> 2 модуля по 6 замков</span>
+            .get__item.get__item_2
+              .get__profile
+                img.get__picture.get__picture_2(src="assets/images/get2.png")
+              .get__header
+                h2.get__heading 10 <span class="get__heading get__heading_orange">адаптированных<br> для проката</span> самокатов 
+            .get__item.get__item_3
+              .get__profile
+                img.get__picture.get__picture_3(src="assets/images/get3.png")
+              .get__header
+                h2.get__heading Доступ <span class="get__heading get__heading_orange">к единой облачной системе оплаты</span>
+          .get__row
+            .get__item.get__item_4
+              .get__header.get__header_5
+                h2.get__heading.get__heading_orange.get__heading_click Не включено*
+            .get__item.get__item_5
+              .get__profile
+                img.get__picture.get__picture_5(src="assets/images/get4.png")
+              .get__header
+                h2.get__heading Блок управления <span class="get__heading get__heading_orange">станцией с набором батарей на 3 дня работы*</span>
+                p.get__lead * Возможна установка дополнительного модуля с солнечной батареей для автономной работы
+            .get__item.get__item_6
+              .get__profile
+                img.get__picture.get__picture_6(src="assets/images/get5.png")
+              .get__header
+                h2.get__heading.get__heading_orange Маркетинговая и информационная 
+                  <span class="get__heading">поддержка<span>
+                p.get__lead активная реклама бренда
+                p.get__lead обучающие материалы по обслуживанию и ремонту станций самокатов
+        img.get__hand(src="assets/images/get_hand.png")   
+        
+
+
+          
+
+
+
+        
+          

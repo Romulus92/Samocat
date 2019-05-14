@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'MoscowSans Bold';
+  src: url('../webfonts/MoscowSans-Bold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../webfonts/MoscowSans-Bold.woff') format('woff');
+  /* Pretty Modern Browsers */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MoscowSans Extrabold';
+  src: url('../webfonts/MoscowSans-Extrabold.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../webfonts/MoscowSans-Extrabold.woff') format('woff');
+  /* Pretty Modern Browsers */
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MoscowSans Light';
+  src: url('../webfonts/MoscowSans-Light.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../webfonts/MoscowSans-Light.woff') format('woff');
+  /* Pretty Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MoscowSans Medium';
+  src: url('../webfonts/MoscowSans-Medium.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../webfonts/MoscowSans-Medium.woff') format('woff');
+  /* Pretty Modern Browsers */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MoscowSans Regular';
+  src: url('../webfonts/MoscowSans-Regular.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../webfonts/MoscowSans-Regular.woff') format('woff');
+  /* Pretty Modern Browsers */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin moscow($style) {
+  @if $style==bold {
+    font-family: 'MoscowSans Bold', Helvetica, sans-serif;
+  }
+
+  @if $style==extra-bold {
+    font-family: 'MoscowSans Extrabold', Helvetica, sans-serif;
+  }
+
+  @if $style==light {
+    font-family: 'MoscowSans Light', Helvetica, sans-serif;
+    /* font-weight: 700; */
+  }
+
+  @if $style==medium {
+    font-family: 'MoscowSans Medium', Helvetica, sans-serif;
+    font-weight: normal;
+  }
+
+  @if $style==regular {
+    font-family: 'MoscowSans Regular', Helvetica, sans-serif;
+  }
+}

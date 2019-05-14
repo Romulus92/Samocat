@@ -1,0 +1,102 @@
+extends ../template 
+
+block content
+  .ride__content-mobile
+    .ride__mobile-header
+      .container
+        span.ride__mobile_logo Samocat sharing
+        a.ride__mobile_burger
+          .ride__mobile_line.ride__mobile_line_1
+          .ride__mobile_line.ride__mobile_line_2
+          .ride__mobile_line.ride__mobile_line_3
+    .ride__mobile_menu
+      .ride__mobile_choice
+        a.ride__mobile_rent
+          img.ride__mobile_rent_bg(src="assets/images/stoika_plan.png")
+          h2.ride__mobile_rent_heading Прокат
+        a.ride__mobile_buisness
+          img.ride__mobile_buisness_bg(src="assets/images/menu_fransh_plan.png")
+          h2.ride__mobile_buisness_heading Франшиза
+      .ride__mobile_footer
+        a.ride__mobile_footer_rate тарифы
+        a.ride__mobile_footer_rules правила
+      .nav__lang
+        a.nav__lang-link.nav__lang-link_active en
+        .nav__lang-line
+        a.nav__lang-link ru
+      .footer__social
+        a.footer__social-item(href='https://vk.com/samocatsharing')
+          svg.footer__social-img
+            use(xlink:href='#logo_vk')
+          i.footer__social-img-fallback.fab.fa-vk
+        a.footer__social-item(href='https://www.facebook.com/SamocatSharing')
+          svg.footer__social-img
+            use(xlink:href='#logo_fb')
+          i.footer__social-img-fallback.fab.fa-facebook-f
+        a.footer__social-item(href='https://www.instagram.com/samocat_sharing/')
+          svg.footer__social-img
+            use(xlink:href='#logo_ig')
+          i.footer__social-img-fallback.fab.fa-instagram
+      span.footer__copyright © 2018, «samocat sharing»
+      a.footer__rechi-logo(href="https://rechi.media/")
+        svg.footer__rechi-img
+          use(xlink:href='#logo_rechi')
+        img.lazy.footer__rechi-img-fallback(data-src='assets/images/logo-footer.png', alt='')
+    .ride__mobile-slider
+      .auto
+        .container
+          .slider__header
+            h2.slider__heading Сеть автоматических <br>
+              h2.slider__heading.slider__heading-orange станций проката 24/7 
+            p.auto__lead Просто возьми самокат в прокат и ощути новый уровень мобильности!
+          .auto__phone
+            .auto__logo
+              svg.auto__logo-img
+                use(xlink:href="#bicycle")
+            span.auto__text Качай приложение
+            img.auto__google(src="assets/images/googleplay_orange.svg")
+            img.auto__appstore(src="assets/images/appstore_orange.svg")
+            .auto__hand
+      .choice
+        .container
+          .slider__header
+            h2.slider__heading.slider__heading_center Выбирай станцию 
+              h2.slider__heading.slider__heading_center.slider__heading-orange и бронируй самокат
+      .pay
+        .container
+          .pay__header
+            h2.pay__heading Оплачивай
+            h2.pay__heading.pay__heading_orange доступ
+      .hero_mobile
+        .container.container__slider
+          .ride__item-picture.animated
+            img.ride__item-picture-img(src="assets/images/samocatman.svg")
+          .ride__item-bubble.animated
+            .ride__item-bubble-text Поехали!
+      .easy_mobile
+        .container
+          .slider__header
+            h2.slider__heading.slider__heading_center.slider__heading-orange Да, это просто.
+              h2.slider__heading.slider__heading_center Удобно. Легко!
+          p.easy_mobile__lead
+            span.easy_mobile__lead_bold Самокат 
+            | – идеальное средство передвижения по городу. До дома, до работы, до метро или магазина. Выстраивай любые маршруты и экономь время на своих перемещениях.
+      .setup_mobile
+        .container
+          h2.setup_mobile__heading Устанавливай приложение на свой смартфон
+        .setup_mobile__hand
+        .setup_mobile__content
+          p.setup_mobile__text Катайся куда хочешь<br> и когда захочешь!
+          a.setup_mobile__google
+            img.setup_mobile__google-img(src="assets/images/googleplay.svg")
+          a.setup_mobile__appstore
+            img.setup_mobile__appstore-img(src="assets/images/appstore.svg")
+          .setup_mobile__info
+            a.setup_mobile__rules правила
+            a.setup_mobile__oferta публичная оферта
+            a.setup_mobile__confidential политика конфиденциальности
+
+
+
+          
+

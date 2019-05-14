@@ -1,0 +1,36 @@
+// resolutions
+$macbookair: 1366px;
+$bignotebooks: 1280px;
+$notebooks: 1160px;
+$netbooks: 1024px;
+$tablets: 823px;
+$minitablets: 602px;
+$phones: 480px;
+$minphones: 360px;
+$iphones: 320px;
+$phonesminheight: 415px;
+$phonesmaxheight: 823px;
+$pixel: 411px;
+$iphonex: 375px;
+//normalize
+@import "config/normalize/import-now";
+//vendors
+@import "vendors/slick";
+//media
+@import "layout/_media";
+//config
+@import "config/_variables";
+@import "config/_mixins";
+//layout
+@import "layout/_fonts";
+@import "layout/_base";
+//common
+@import "common/header";
+//index
+@import "pages/index/hero";
+@import "pages/index/ride";
+@import "pages/index/buisness";
+@import "pages/index/easy";
+@import "pages/index/setup";
+@import "pages/index/footer";
+@import "pages/index/ride_mobile";

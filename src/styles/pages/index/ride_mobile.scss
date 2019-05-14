@@ -1,0 +1,686 @@
+.ride {
+  &__content {
+    &-mobile {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__mobile-slider {
+    width: 100%;
+    height: 100%;
+    .slick-list,
+    .slick-track {
+      height: 100%;
+    }
+  }
+  &__pagination-mobile {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    li {
+      width: 11px;
+      height: 11px;
+      background: #d0d0d0;
+      appearance: none;
+      border-radius: 50%;
+      margin-right: 7px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      button {
+        display: none;
+      }
+    }
+  }
+  &__mobile {
+    &_logo {
+      font-size: 22px;
+      color: #ffba11;
+      @include moscow(extra-bold);
+      display: flex;
+      align-items: center;
+      @include phones {
+        font-size: 18px;
+      }
+    }
+    &-header {
+      position: absolute;
+      height: 67px;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      z-index: 7;
+      padding-top: 5px;
+      @include tablets {
+        display: flex;
+      }
+      .container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    &_burger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 86px;
+      height: 67px;
+      border-radius: 50%;
+      background: url(../images/burger_bg.png);
+      background-size: cover;
+      cursor: pointer;
+      position: relative;
+      transition: background-image 0.4s ease-in-out;
+      &_open {
+        width: 80px;
+        background: url(../images/burger_bg_open.png);
+      }
+    }
+    &_line {
+      width: 42px;
+      height: 4px;
+      background: black;
+      margin-bottom: 7px;
+      transition: all .5s ease-in-out;
+      position: absolute;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &_1 {
+        top: 21px;
+        &.ride__mobile_line_open {
+          top: 32px;
+          transform: rotate(45deg);
+        }
+      }
+      &_2 {
+        &.ride__mobile_line_open {
+          opacity: 0;
+        }
+      }
+      &_3 {
+        bottom: 20px;
+        &.ride__mobile_line_open {
+          bottom: 31px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    &_menu {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      z-index: 6;
+      background: white;
+      transition: transform .4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      ;
+      transform: translateX(100%);
+      /* &_visible {
+        display: flex;
+      } */
+      &_open {
+        transform: translateX(0);
+      }
+      .nav__lang {
+        display: flex;
+        justify-content: center;
+        /* margin-bottom: 50px;
+        @include phones {
+          margin-bottom: 25px;
+        } */
+      }
+      .footer__social {
+        display: flex;
+        justify-content: center;
+        /* margin-bottom: 50px;
+        @include phones {
+          margin-bottom: 25px;
+        } */
+        &-item {
+          width: 40px;
+          height: 40px;
+          @include phones {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        &-img {
+          width: 100%;
+          height: 100%;
+          fill: black;
+        }
+      }
+      .footer__copyright {
+        color: black;
+        opacity: 0.6;
+        text-align: center;
+        font-size: 20px;
+        /* margin-bottom: 50px; */
+        @include phones {
+          /* margin-bottom: 10px; */
+          font-size: 14px;
+        }
+      }
+      .footer__rechi-logo {
+        align-self: center;
+        width: 72px;
+        height: 58px;
+        margin-bottom: 10px;
+        @include phones {
+          width: 36px;
+          height: 29px;
+        }
+      }
+      .footer__rechi-img {
+        fill: #666;
+      }
+      .nav__lang-link {
+        font-size: 30px;
+        color: #ffba11;
+        border-bottom: 1px solid transparent;
+        @include phones {
+          font-size: 18px;
+        }
+      }
+      .nav__lang-link.nav__lang-link_active {
+        color: black;
+        border-bottom: 1px solid black;
+      }
+      .nav__lang-line {
+        background: #ffba11;
+        margin-bottom: 0;
+        height: 18px;
+        @include phones {
+          height: 12px;
+        }
+      }
+    }
+    &_rent {
+      width: 50%;
+      /* background: url(../images/stoika_plan.png) center bottom no-repeat;
+      background-size: cover; */
+      display: flex;
+      justify-content: center;
+      &_bg {
+        position: absolute;
+        top: -170px;
+        left: 0;
+        @include phones {
+          top: -20px;
+        }
+        @include iphones {
+          top: -30px;
+        }
+      }
+      /* @include phones {
+        background: url(../images/stoika_mob.png) no-repeat;
+      } */
+      &_heading {
+        padding-top: 125px;
+        @include moscow(extra-bold);
+        font-size: 30px;
+        margin: 0;
+        position: relative;
+        @include phones {
+          font-size: 20px;
+        }
+      }
+    }
+    &_buisness {
+      width: 50%;
+      /* background: url(../images/menu_fransh_plan.png) center center no-repeat;
+      background-size: cover; */
+      display: flex;
+      justify-content: center;
+      &_bg {
+        position: absolute;
+        top: -200px;
+        right: 0;
+        @include phones {
+          top: -20px;
+        }
+        @include iphones {
+          top: -30px;
+        }
+      }
+      @include phones {
+        /*  background: url(../images/menu_fransh.png) center center no-repeat;
+        background-size: cover; */
+      }
+      &_heading {
+        @include moscow(extra-bold);
+        padding-top: 125px;
+        font-size: 30px;
+        margin: 0;
+        position: relative;
+        @include phones {
+          font-size: 20px;
+        }
+      }
+    }
+    &_choice {
+      width: 100%;
+      height: 56%;
+      display: flex;
+      flex-direction: row;
+    }
+    &_footer {
+      display: flex;
+      justify-content: center;
+      /* margin-top: 50px;
+      margin-bottom: 50px;
+      @include phones {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      } */
+      &_rate {
+        font-size: 30px;
+        @include moscow(medium);
+        margin-right: 60px;
+        @include phones {
+          font-size: 18px;
+        }
+      }
+      &_rules {
+        font-size: 30px;
+        @include moscow(medium);
+        @include phones {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.slider {
+  &__heading {
+    font-size: 40px;
+    @include moscow(medium);
+    margin: 0;
+    margin-top: 80px;
+    padding: 0 5%;
+    @include phones {
+      font-size: 20px;
+    }
+    &:last-of-type {
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+    &-orange {
+      color: #f3b828;
+    }
+    &_center {
+      text-align: center;
+    }
+    &_inline {
+      display: inline;
+    }
+  }
+}
+
+li.slick-active {
+  background: #f3bc38;
+}
+
+.auto {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(../images/auto_tab_bg.png) no-repeat center bottom;
+  background-size: contain;
+  position: relative;
+  .container {
+    height: 100%;
+    justify-content: space-between;
+  }
+  @include phones {
+    background: url(../images/auto_mob_bg.png) no-repeat center bottom;
+    background-size: contain;
+    /* background-position-y: 323px; */
+    background-position-y: 28vh;
+  }
+  @include iphones {
+    background-position-y: 219px;
+  }
+  @include phonesmaxheight {
+    background-position-y: 40vh;
+  }
+  &__lead {
+    @include moscow(light);
+    font-size: 16px;
+    padding: 0 5%;
+  }
+  &__logo {
+    width: 80px;
+    height: 80px;
+    background: #f3b828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    &-img {
+      width: 60%;
+      height: 60%;
+    }
+    @include phones {
+      width: 43px;
+      height: 43px;
+    }
+  }
+  &__text {
+    font-size: 40px;
+    @include moscow(medium);
+    margin-bottom: 20px;
+    @include phones {
+      font-size: 20px;
+    }
+  }
+  &__google {
+    width: 240px;
+    height: 82px;
+    margin-bottom: 20px;
+    @include phones {
+      width: 160px;
+      height: 55px;
+    }
+  }
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+    @include phones {
+      margin-bottom: 50px;
+    }
+  }
+  &__appstore {
+    width: 240px;
+    height: 82px;
+    @include phones {
+      width: 160px;
+      height: 55px;
+    }
+  }
+}
+
+.choice {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(../images/choice_tab_bg.png) no-repeat center bottom;
+  background-size: contain;
+  background-position-y: 150%;
+  @include phones {
+    background: url(../images/choice_mob_bg.png) no-repeat center bottom;
+    background-position-y: 32vh;
+  }
+  @include phonesmaxheight {
+    background-position-y: bottom;
+  }
+  @include phonesmidheight {
+    background-position-y: 40vh;
+  }
+  @include minphones {
+    background-position-y: 34vh;
+  }
+  @include iphones {
+    background-position-y: 26vh;
+  }
+}
+
+.pay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(../images/pay_tab_bg.png) no-repeat center bottom;
+  background-size: contain;
+  background-position-y: 150%;
+  @include phones {
+    background: url(../images/pay_mob_bg.png) no-repeat center bottom;
+    background-position-y: 32vh;
+  }
+  @include phonesmaxheight {
+    background-position-y: bottom;
+  }
+  @include phonesmidheight {
+    background-position-y: 40vh;
+  }
+  @include iphones {
+    background-position-y: 26vh;
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+  &__heading {
+    font-size: 40px;
+    @include moscow(medium);
+    margin: 0;
+    margin-right: 10px;
+    margin-top: 105px;
+    @include phones {
+      font-size: 25px;
+    }
+    &_orange {
+      color: #f3b828;
+    }
+  }
+}
+
+.hero_mobile {
+  background: url(../images/city.png) no-repeat center bottom;
+  background-size: contain;
+  overflow: hidden;
+  .container {
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+  }
+}
+
+.easy_mobile {
+  background: url(../images/mappoint.png) no-repeat center;
+  background-position-y: 70%;
+  @include phones {
+    background-size: 150%;
+    background-position-y: 80%;
+  }
+  @include iphones {
+    background-size: 150%;
+    background-position-y: 80%;
+  }
+  @include phonesmaxheight {
+    background-size: 200%;
+    background-position-y: 70%;
+  }
+  &__lead {
+    @include moscow(light);
+    font-size: 20px;
+    line-height: 28px;
+    width: 95%;
+    padding-left: 19px;
+    align-self: center;
+    @include phones {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &_bold {
+      @include moscow(bold)
+    }
+  }
+}
+
+.setup_mobile {
+  background: url(../images/bg_easy_mob.png) no-repeat center;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: flex-end;
+  justify-content: space-between; */
+  &__heading {
+    margin-top: 90px;
+    @include moscow(medium);
+    font-size: 30px;
+    text-align: center;
+    max-width: 400px;
+    align-self: center;
+    position: relative;
+    z-index: 3;
+    @include phones {
+      max-width: 270px;
+      margin-top: 65px;
+      font-size: 20px;
+    }
+    @include phonesmaxheight {
+      margin-top: 75px;
+      font-size: 22px;
+    }
+    @include iphones {
+      display: none;
+    }
+  }
+  &__hand {
+    width: 100%;
+    height: 100%;
+    background: url(../images/hand.png) center center no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include phones {
+      /* width: 655px; */
+      background: url(../images/phone_hand.png) no-repeat center bottom;
+      background-position-y: 15vh;
+    }
+    @include phonesmaxheight {
+      background-position-y: 22vh;
+    }
+    @include phonesmidheight {
+      background-position-y: 17vh;
+    }
+    @include minphones {
+      background-position-y: 125px;
+    }
+    @include iphones {
+      background-position-y: 85px;
+    }
+    /* @include netbooks {
+      left: -70px;
+    } */
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+    margin-top: -20px;
+  }
+  &__text {
+    margin-top: 225px;
+    @include moscow(bold);
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 14px;
+    @include phones {
+      margin-top: 260px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    @include phonesmaxheight {
+      margin-top: 265px;
+    }
+    @include iphones {
+      margin-top: 260px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  &__google {
+    width: 240px;
+    height: 82px;
+    @include phones {
+      width: 152px;
+      height: 54px;
+    }
+    margin-bottom: 6px;
+    &-img {
+      width: 240px;
+      height: 82px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      @include phones {
+        width: 152px;
+        height: 54px;
+      }
+    }
+  }
+  &__appstore {
+    width: 240px;
+    height: 82px;
+    margin-bottom: 60px;
+    @include phones {
+      width: 152px;
+      height: 54px;
+    }
+    @include iphones {
+      margin-bottom: 20px;
+    }
+    &-img {
+      width: 240px;
+      height: 82px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      @include phones {
+        width: 152px;
+        height: 54px;
+      }
+    }
+  }
+  &__info {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__rules,
+  &__oferta,
+  &__confidential {
+    color: white;
+    border-bottom: 1px dashed white;
+    font-size: 20px;
+    line-height: 24px;
+    @include moscow(light);
+    @include phones {
+      font-size: 16px;
+      line-height: 17px;
+    }
+    @include iphones {
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+}
+
+.slick-initialized .setup_mobile.slick-slide {
+  display: flex;
+}

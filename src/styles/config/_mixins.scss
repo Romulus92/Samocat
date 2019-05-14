@@ -1,0 +1,71 @@
+@mixin macbookair {
+  @media screen and (max-width: $macbookair) {
+    @content;
+  }
+}
+
+@mixin bignotebooks {
+  @media screen and (max-width: $bignotebooks) {
+    @content;
+  }
+}
+
+@mixin notebooks {
+  @media screen and (max-width: $notebooks) {
+    @content;
+  }
+}
+
+@mixin netbooks {
+  @media screen and (max-width: $netbooks) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin minitablets {
+  @media screen and (max-width: $minitablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+@mixin iphones {
+  @media screen and (max-width: $iphones) {
+    @content;
+  }
+}
+
+@mixin phonesminheight {
+  @media screen and (max-height: $phonesminheight) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin phonesmaxheight {
+  @media screen and (max-height: $phonesmaxheight) and (min-width: $iphonex) and (max-width: 1023px) and (min-height: 812px) {
+    @content;
+  }
+}
+
+@mixin phonesmidheight {
+  @media screen and (max-height: $phonesmaxheight) and (min-width: $iphonex) and (max-width: 1023px) and (min-height: 732px) {
+    @content;
+  }
+}
+
+@mixin minphones {
+  @media screen and (max-width: $minphones) {
+    @content;
+  }
+}

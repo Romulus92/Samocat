@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="305" height="166" viewBox="0 0 305 166">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="rightbuble.svg" class="cls-1" d="M1283,284H1087.73L1058,308l-7.39-24H1038a30,30,0,0,1-30-30V172a30,30,0,0,1,30-30h245a30,30,0,0,1,30,30v82A30,30,0,0,1,1283,284Z" transform="translate(-1008 -142)"/>
+</svg>
